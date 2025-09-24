@@ -16,13 +16,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #111;
   padding: 15px 30px;
     /* Fondo con la imagen */
-  background: url('../img/navbar.png') no-repeat center center;
-  background-size: contain;
+  background: #0d1b2a url('https://www.transparenttextures.com/patterns/stardust.png');
+  background-size: auto;
   background-position: bottom;
   height: 80px; /* ajusta la altura */
+  width: 100%;
   position: relative;
 }
 .navbar::before {
