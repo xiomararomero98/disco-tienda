@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito - Disco Online</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1>Disco Club</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="blogs.html">Eventos</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="registro.html">Registro</a></li>
+        <li><a href="carrito.html">🛒</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Carrito de Compras</h2>
+    <div id="carrito-lista"></div>
+    <p id="total"></p>
+    <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Disco Online</p>
+  </footer>
+
+  <script>
+    function mostrarCarrito() {
+      const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+      const lista = document.getElementById("carrito-lista");
+      const total = document.getElementById("total");
+      lista.innerHTML = "";
+
+      let suma = 0;
+      carrito.forEach(p => {
+        const item = document.createElement("div");
+        item.textContent = `${p.nombre} - $${p.precio}`;
+        lista.appendChild(item);
+        suma += p.precio;
+      });
+
+      total.textContent = `Total: $${suma}`;
+    }
+
+    function vaciarCarrito() {
+      localStorage.removeItem("carrito");
+      mostrarCarrito();
+      alert("Carrito vacío ❌");
+    }
+
+    document.addEventListener("DOMContentLoaded", mostrarCarrito);
+  </script>
+</body>
+</html>

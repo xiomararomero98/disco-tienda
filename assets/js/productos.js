@@ -25,5 +25,9 @@ function agregarCarrito(id) {
   const producto = productos.find(p => p.id === id);
   carrito.push(producto);
   localStorage.setItem("carrito", JSON.stringify(carrito));
-  alert(`${producto.nombre} agregado al carrito`);
+  
+  if (confirm(`${producto.nombre} agregado ✅\n¿Quieres ir al carrito?`)) {
+    window.location.href = "carrito.html";
+  }
 }
+
