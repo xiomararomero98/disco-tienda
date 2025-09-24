@@ -178,6 +178,23 @@ body {
   background: #ff0099;
   color: #fff;
 }
+.carrito-link {
+  position: relative;
+  display: inline-block;
+}
+
+.badge {
+  position: absolute;
+  top: -8px;   /* sube el circulito */
+  right: -12px; /* lo mueve a la derecha */
+  background: #ff0099;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px 6px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #ff0099, 0 0 12px #ff33aa; /* efecto neón */
+}
 
 /* Footer */
 footer {
