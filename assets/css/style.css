@@ -18,8 +18,31 @@ body {
   align-items: center;
   background: #111;
   padding: 15px 30px;
+    /* Fondo con la imagen */
+  background: url('../img/navbar.png') no-repeat center center;
+  background-size: contain;
+  background-position: bottom;
+  height: 80px; /* ajusta la altura */
+  position: relative;
+}
+.navbar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* filtro oscuro opcional */
+  z-index: 0;
 }
 
+.navbar * {
+  position: relative;
+  z-index: 1; /* asegura que el texto esté encima */
+}
+
+.titulo-navbar {
+  font-size: 24px;
+  color: #fff;
+  text-shadow: 0 0 10px #ff0099, 0 0 20px #ff0099; /* efecto neón */
+}
 .navbar .logo {
   display: flex;
   align-items: center;
