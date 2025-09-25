@@ -25,9 +25,28 @@ function agregarCarrito(id) {
   const producto = productos.find(p => p.id === id);
   carrito.push(producto);
   localStorage.setItem("carrito", JSON.stringify(carrito));
-  
+
+  actualizarContadorCarrito(); // 👈 actualiza el numerito
+
   if (confirm(`${producto.nombre} agregado ✅\n¿Quieres ir al carrito?`)) {
     window.location.href = "carrito.html";
   }
 }
+function actualizarContadorCarrito() {
+  const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  const contador = document.getElementById("contador-carrito");
+  if (contador) {
+    if (carrito.length === 0) {
+      contador.style.display = "none"; // se oculta cuando está en 0
+    } else {
+      contador.style.display = "inline-block"; // visible cuando hay productos
+      contador.textContent = carrito.length;
+    }
+  }
+}
+
+// Ejecutar al cargar la página
+document.addEventListener("DOMContentLoaded", actualizarContadorCarrito);
+
+
 

@@ -35,3 +35,18 @@ function validarContacto(event) {
   // Aquí después completamos reglas
   alert("Formulario de contacto validado ✅");
 }
+function actualizarContadorCarrito() {
+  const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  const contador = document.getElementById("contador-carrito");
+  if (contador) {
+    if (carrito.length === 0) {
+      contador.style.display = "none"; // se oculta cuando está en 0
+    } else {
+      contador.style.display = "inline-block"; // visible cuando hay productos
+      contador.textContent = carrito.length;
+    }
+  }
+}
+
+// Ejecutar al cargar la página
+document.addEventListener("DOMContentLoaded", actualizarContadorCarrito);
