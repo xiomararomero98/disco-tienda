@@ -18,7 +18,7 @@ body {
   align-items: center;
   padding: 15px 30px;
     /* Fondo con la imagen */
-  background: #0d1b2a url('https://www.transparenttextures.com/patterns/stardust.png');
+  background: #000000 url('https://www.transparenttextures.com/patterns/stardust.png');
   background-size: auto;
   background-position: bottom;
   height: 80px; /* ajusta la altura */
@@ -46,11 +46,12 @@ body {
 .navbar .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 100x;
 }
 
 .navbar .logo img {
-  width: 40px;
+  width: 150px;
+  height: auto;
 }
 
 .navbar h1 {
@@ -78,8 +79,9 @@ body {
 
 /* Hero */
 .hero {
-  height: 60vh;
-  background: url('../img/disco-bg.jpg') no-repeat center center / cover;
+  height: 70vh;
+  background: url('../img/navbar.jpg') no-repeat center center;
+  background-size:cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -88,7 +90,7 @@ body {
 
 .hero-text {
   background: rgba(0, 0, 0, 0.6);
-  padding: 30px;
+  padding: 40px;
   border-radius: 10px;
 }
 
