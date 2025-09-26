@@ -6,11 +6,15 @@
   <title>Carrito - Disco Online</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body class="carrito-page">
+  <!-- Navbar -->
   <header>
-  <nav class="navbar" style="display: flex; align-items: center; justify-content: space-between;">
-    <h1 class="titulo-navbar" style="margin: 0;">Disco Club</h1>
-    <ul class="nav-links" style="display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; align-items: center;">
+    <nav class="navbar">
+      <div class="logo">
+        <img src="assets/img/logo-deef.png" alt="Logo Disco" class="logo-img">
+        <h1 class="titulo-navbar">Disco Club</h1>
+      </div>
+      <ul class="nav-links">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="productos.html">Productos</a></li>
         <li><a href="blogs.html">Eventos</a></li>
@@ -18,52 +22,45 @@
         <li><a href="contacto.html">Contacto</a></li>
         <li><a href="login.html">Login</a></li>
         <li>
-            <a href="carrito.html" class="carrito-link" style="display: flex; align-items: center;">
-                🛒
-                <span id="contador-carrito" class="badge" style="margin-left: 4px;">0</span>
-            </a>
+          <a href="carrito.html" class="carrito-link active">
+            🛒 <span id="contador-carrito" class="badge">0</span>
+          </a>
         </li>
-    </ul>
-</nav>
+      </ul>
+    </nav>
   </header>
 
-  <main>
-    <h2>Carrito de Compras</h2>
-    <div id="carrito-lista"></div>
-    <p id="total"></p>
-    <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+  <!-- Contenido principal -->
+  <main class="carrito-container">
+    <h2>🛒 Carrito de Compras</h2>
+
+    <table class="carrito-tabla">
+      <thead>
+        <tr>
+          <th>Imagen</th>
+          <th>Producto</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th>Subtotal</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="carrito-lista"></tbody>
+    </table>
+
+    <div class="carrito-total">
+      <p id="total">Total: $0</p>
+      <button onclick="vaciarCarrito()" class="btn">Vaciar Carrito</button>
+      <button onclick="finalizarCompra()" class="btn">Finalizar Compra</button>
+    </div>
   </main>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Disco Online</p>
   </footer>
 
-  <script>
-    function mostrarCarrito() {
-      const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-      const lista = document.getElementById("carrito-lista");
-      const total = document.getElementById("total");
-      lista.innerHTML = "";
-
-      let suma = 0;
-      carrito.forEach(p => {
-        const item = document.createElement("div");
-        item.textContent = `${p.nombre} - $${p.precio}`;
-        lista.appendChild(item);
-        suma += p.precio;
-      });
-
-      total.textContent = `Total: $${suma}`;
-    }
-
-    function vaciarCarrito() {
-     localStorage.removeItem("carrito");
-     mostrarCarrito();
-     actualizarContadorCarrito(); // 👈 actualiza el numerito
-     alert("Carrito vacío ❌");
-}
-
-    document.addEventListener("DOMContentLoaded", mostrarCarrito);
-  </script>
+  <!-- JS -->
+  <script src="assets/js/productos.js"></script>
 </body>
 </html>

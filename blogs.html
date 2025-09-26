@@ -6,27 +6,31 @@
   <title>Eventos - Disco Online</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body class="blogs-page">
+  <!-- Navbar -->
   <header>
-  <nav class="navbar" style="display: flex; align-items: center; justify-content: space-between;">
-    <h1 class="titulo-navbar" style="margin: 0;">Disco Club</h1>
-    <ul class="nav-links" style="display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0; align-items: center;">
+    <nav class="navbar">
+      <div class="logo">
+        <img src="assets/img/logo-deef.png" alt="Logo Disco" class="logo-img">
+        <h1 class="titulo-navbar">Disco Club</h1>
+      </div>
+      <ul class="nav-links">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="productos.html">Productos</a></li>
-        <li><a href="blogs.html">Eventos</a></li>
+        <li><a href="blogs.html" class="active">Eventos</a></li>
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="contacto.html">Contacto</a></li>
         <li><a href="login.html">Login</a></li>
         <li>
-            <a href="carrito.html" class="carrito-link" style="display: flex; align-items: center;">
-                🛒
-                <span id="contador-carrito" class="badge">0</span>
-            </a>
+          <a href="carrito.html" class="carrito-link">
+            🛒 <span id="contador-carrito" class="badge">0</span>
+          </a>
         </li>
-    </ul>
-</nav>
+      </ul>
+    </nav>
   </header>
 
+<<<<<<< HEAD
   <main>
     <h2>Eventos y Noticias</h2>
     <div class="blog-lista">
@@ -40,6 +44,26 @@
         <h3><a href="blog2.html">Fiesta de Disfraces</a></h3>
         <p>Premios a los mejores disfraces y música toda la noche.</p>
       </article>
+=======
+  <main class="eventos-container">
+    <h2>🎉 Próximos Eventos</h2>
+    <div class="grid-eventos">
+      <!-- Evento 1 -->
+      <div class="evento">
+        <img src="assets/img/regueton.png" alt="Noche de Reggaetón">
+        <h3>🔥 Noche de Reggaetón</h3>
+        <p>Los mejores hits de reggaetón toda la noche.</p>
+        <a href="blog1.html" class="btn">Ver más</a>
+      </div>
+
+      <!-- Evento 2 -->
+      <div class="evento">
+        <img src="assets/img/disfraces.png" alt="Fiesta de Disfraces">
+        <h3>🎭 Fiesta de Disfraces</h3>
+        <p>Ven disfrazado y gana premios increíbles.</p>
+        <a href="blog2.html" class="btn">Ver más</a>
+      </div>
+>>>>>>> f47e57aa82be2a064ece5125b3dadad5bf8fa8b9
     </div>
   </main>
 

@@ -8,37 +8,33 @@
 </head>
 <body>
 <header>
-    <nav class="navbar" style="display: flex; align-items: center; justify-content: space-between;">
-        <h1 class="titulo-navbar" style="margin: 0;">Disco Club</h1>
-        <ul class="nav-links" style="display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0; align-items: center;">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="productos.html">Productos</a></li>
-            <li><a href="blogs.html">Eventos</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li>
-                <a href="carrito.html" class="carrito-link" style="display: flex; align-items: center;">
-                    🛒
-                    <span id="contador-carrito" class="badge">0</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
+  <nav class="navbar">
+    <h1 class="titulo-navbar">Disco Club</h1>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="productos.html" class="active">Productos</a></li>
+      <li><a href="blogs.html">Eventos</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li>
+        <a href="carrito.html" class="carrito-link">
+          🛒 <span id="contador-carrito" class="badge">0</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
 </header>
-  </header>
 
-  <main>
-    <h2>Todos los Productos</h2>
-    <div id="lista-productos" class="grid-productos">
-      <!-- Aquí se mostrarán los productos con JS -->
-    </div>
-  </main>
+<main>
+  <h2>Todos los Productos</h2>
+  <div id="lista-productos" class="grid-productos"></div>
+</main>
 
-  <footer>
-    <p>&copy; 2025 Disco Online</p>
-  </footer>
+<footer>
+  <p>&copy; 2025 Lights</p>
+</footer>
 
-  <script src="assets/js/productos.js"></script>
+<script src="assets/js/productos.js"></script>
 </body>
 </html>

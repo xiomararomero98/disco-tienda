@@ -6,39 +6,50 @@
   <title>Detalle Producto - Disco Online</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-<header>
-    <nav class="navbar" style="display: flex; align-items: center; justify-content: space-between;">
-        <h1 class="titulo-navbar" style="margin: 0;">Disco Club</h1>
-        <ul class="nav-links" style="display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0; align-items: center;">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="productos.html">Productos</a></li>
-            <li><a href="blogs.html">Eventos</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li>
-                <a href="carrito.html" class="carrito-link" style="display: flex; align-items: center;">
-                    🛒
-                    <span id="contador-carrito" class="badge" style="margin-left: 4px;">0</span>
-                </a>
-            </li>
-        </ul>
+<body class="producto-detalle-page">
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="assets/img/logo-deef.png" alt="Logo Disco" class="logo-img">
+        <h1 class="titulo-navbar">Disco Club</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="blogs.html">Eventos</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="registro.html">Registro</a></li>
+        <li>
+          <a href="carrito.html" class="carrito-link">
+            🛒 <span id="contador-carrito" class="badge">0</span>
+          </a>
+        </li>
+      </ul>
     </nav>
   </header>
 
-  <main>
-    <h2>Detalle del Producto</h2>
-    <div id="detalle-producto">
-      <!-- Aquí se cargará un producto específico con JS -->
+  <!-- Contenido principal -->
+  <main class="detalle-container">
+    <div id="detalle-producto" class="detalle-box">
+      <!-- JS va a inyectar aquí el detalle del producto -->
     </div>
-    <a href="carrito.html" class="btn">Ir al carrito 🛒</a>
+  </main> <!-- Botón de ir al carrito -->
+  <div class="volver-container">
+    <a href="carrito.html" class="btn volver-btn">⬅ Ir al carrito</a>
+    <a href="productos.html" class="btn volver-btn">⬅ Volver a Productos</a>
+
+  </div><
   </main>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Disco Online</p>
   </footer>
 
+  <!-- JS -->
   <script src="assets/js/productos.js"></script>
 </body>
 </html>

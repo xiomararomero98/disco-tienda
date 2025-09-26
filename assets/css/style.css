@@ -11,25 +11,26 @@ body {
   color: #fff;
 }
 
-/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-    /* Fondo con la imagen */
-  background:rgba(139, 0, 163, 0.585);
-  background-size: center cover;
+  background-image: url('../img/navbar.jpg'); /* 👈 tu imagen */
+  background-size: cover;   /* 👈 ajusta la imagen para cubrir */
   background-position: center;
-  height: 80px; /* ajusta la altura */
+  background-repeat: no-repeat;
+  height: 80px;
   width: 100%;
   position: relative;
+  box-shadow: 0 0 15px rgba(0,0,0,0.7); /* 👈 opcional: sombra */
 }
+
 .navbar::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6); /* filtro oscuro opcional */
+  background: rgba(0, 0, 0, 0.6); /* filtro oscuro para contraste */
   z-index: 0;
 }
 
@@ -150,13 +151,15 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
+  padding: 20px;
 }
 
 .producto {
-  background: #1a1a1a;
+  background: rgba(17,17,17,0.9);
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
   text-align: center;
+  box-shadow: 0 0 12px #ff0099, 0 0 18px #00ffcc;
   transition: transform 0.3s;
 }
 
@@ -167,6 +170,7 @@ body {
 .producto img {
   width: 100%;
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .producto h3 {
@@ -264,11 +268,10 @@ body.login-page {
 .btn {
   background: #00ffcc;
   border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
+  padding: 8px 14px;
+  border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
-  margin-top: 10px;
   transition: 0.3s;
 }
 
@@ -486,6 +489,7 @@ body.nosotros-page {
     max-height: 250px; /* en móvil más compacto */
   }
 }
+<<<<<<< HEAD
 /*eventos*/
 .blog-lista {
   display: flex;
@@ -506,6 +510,249 @@ body.nosotros-page {
   border-radius: 8px;
   display: block;
 }
+=======
+/* Detalle producto */
+.detalle-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.detalle-box {
+  display: flex;
+  gap: 30px;
+  background: rgba(17,17,17,0.9);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px #ff0099, 0 0 20px #00ffcc;
+}
+
+.detalle-img {
+  width: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.detalle-info {
+  flex: 1;
+  text-align: left;
+}
+
+.detalle-precio {
+  font-size: 22px;
+  color: #00ffcc;
+  margin: 15px 0;
+}
+
+.detalle-descripcion {
+  margin-bottom: 20px;
+  color: #ddd;
+}
+/* ===== Carrito ===== */
+body.carrito-page {
+  background: #000;
+  color: #fff;
+}
+
+/* Contenedor principal */
+.carrito-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.carrito-container h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #ff0099;
+  text-shadow: 0 0 12px #ff0099, 0 0 20px #00ffcc;
+}
+
+/* Tabla del carrito */
+.carrito-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  background: rgba(17, 17, 17, 0.85);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.carrito-tabla th, 
+.carrito-tabla td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #333;
+  color: #fff;
+}
+
+.carrito-tabla th {
+  background: rgba(0,0,0,0.9);
+  font-weight: bold;
+  color: #00ffcc;
+  text-shadow: 0 0 8px #00ffcc;
+}
+
+.carrito-tabla tr:hover {
+  background: rgba(255, 0, 153, 0.15);
+}
+
+.carrito-tabla img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 0 6px #ff0099;
+}
+
+/* Totales */
+.carrito-total {
+  text-align: right;
+  font-size: 20px;
+  background: rgba(0,0,0,0.85);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #ff0099, 0 0 25px #00ffcc;
+}
+
+.carrito-total p {
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+/* Botones */
+.btn {
+  background: #00ffcc;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #000;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ff0099;
+  color: #fff;
+  box-shadow: 0 0 8px #ff0099, 0 0 12px #00ffcc;
+}
+
+/* Botones + y - */
+.carrito-tabla td button {
+  margin: 0 5px;
+  padding: 6px 12px;
+}
+
+.volver-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center; /* centrados */
+  align-items: center;
+  gap: 20px; /* espacio entre botones */
+}
+
+.volver-btn,
+.carrito-btn {
+  background: #222;
+  color: #fff;
+  border: 2px solid #ff0099;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  display: inline-block; /* 👈 asegura que estén lado a lado */
+}
+
+.volver-btn:hover,
+.carrito-btn:hover {
+  background: #ff0099;
+  color: #fff;
+  box-shadow: 0 0 10px #ff0099, 0 0 20px #00ffcc;
+}
+/* ===== Eventos ===== */
+.eventos-container {
+  padding: 40px;
+  text-align: center;
+}
+
+.eventos-container h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #ff0099;
+  text-shadow: 0 0 12px #ff0099, 0 0 20px #00ffcc;
+}
+
+.grid-eventos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.evento {
+  background: rgba(17, 17, 17, 0.85);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 12px #ff0099, 0 0 18px #00ffcc;
+  transition: transform 0.3s;
+}
+
+.evento:hover {
+  transform: scale(1.05);
+}
+
+.evento img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.evento h3 {
+  margin: 10px 0;
+  color: #00ffcc;
+}
+
+.evento p {
+  color: #ccc;
+  font-size: 14px;
+}
+
+/* ===== Detalle de Evento ===== */
+.blog-detalle {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.blog-img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 15px #ff0099, 0 0 25px #00ffcc;
+}
+
+.blog-detalle h2 {
+  font-size: 28px;
+  color: #00ffcc;
+  margin-bottom: 15px;
+}
+
+.blog-detalle p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #ddd;
+}
+
+>>>>>>> f47e57aa82be2a064ece5125b3dadad5bf8fa8b9
 /* Footer */
 footer {
   background: #111;
