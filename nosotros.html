@@ -6,39 +6,80 @@
   <title>Nosotros - Disco Online</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-<header>
-    <nav class="navbar" style="display: flex; align-items: center; justify-content: space-between;">
-        <h1 class="titulo-navbar" style="margin: 0;">Disco Club</h1>
-        <ul class="nav-links" style="display: flex; gap: 1rem; list-style: none; margin: 0; padding: 0; align-items: center;">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="productos.html">Productos</a></li>
-            <li><a href="blogs.html">Eventos</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li>
-                <a href="carrito.html" class="carrito-link" style="display: flex; align-items: center;">
-                    🛒
-                    <span id="contador-carrito" class="badge">0</span>
-                </a>
-            </li>
-        </ul>
+<body class="nosotros-page">
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="assets/img/logo-deef.png" alt="Logo Disco" class="logo-img">
+        <h1 class="titulo-navbar">Disco Club</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="blogs.html">Eventos</a></li>
+        <li><a href="nosotros.html" class="active">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="registro.html">Registro</a></li>
+        <li>
+          <a href="carrito.html" class="carrito-link">
+            🛒 <span id="contador-carrito" class="badge">0</span>
+          </a>
+        </li>
+      </ul>
     </nav>
-</header>
   </header>
 
-  <main>
-    <h2>Sobre la Disco</h2>
-    <p>Disco Online es el lugar donde la fiesta nunca termina. 🎶✨  
-       Aquí podrás comprar tus entradas, reservar tragos y estar al día con todos nuestros eventos.</p>
+  <!-- Hero simple -->
+  <section class="nosotros-hero">
+    <h2>Nosotros</h2>
+    <p>Conoce nuestra historia, misión y visión.</p>
+  </section>
 
-    <h3>Equipo de Desarrollo</h3>
-    <ul>
-      <li>Xiomara Romero</li>
-      <li>[Tus compañeros]</li>
-    </ul>
-  </main>
+  <!-- Sección 1 -->
+  <section class="nosotros-section">
+    <div class="nosotros-texto">
+      <h3>🎶 Quiénes somos</h3>
+      <p>
+        En <strong>Disco Club</strong> celebramos la vida nocturna con pasión. 
+        Nuestro espacio está diseñado para que disfrutes de buena música, 
+        tragos exclusivos y un ambiente seguro y vibrante.
+      </p>
+    </div>
+    <div class="nosotros-imagen">
+      <img src="assets/img/nosotros-1.png" alt="Ambiente disco">
+    </div>
+  </section>
+
+  <!-- Sección 2 -->
+  <section class="nosotros-section invertida">
+    <div class="nosotros-texto">
+      <h3>🌌 Nuestra visión</h3>
+      <p>
+        Queremos ser la discoteque referente en Santiago, ofreciendo experiencias 
+        únicas y recuerdos inolvidables en cada evento que realizamos.
+      </p>
+    </div>
+    <div class="nosotros-imagen">
+      <img src="assets/img/nosotros.png" alt="Pista de baile">
+    </div>
+  </section>
+
+  <!-- Sección 3 -->
+  <section class="nosotros-section">
+    <div class="nosotros-texto">
+      <h3>🔥 Lo que ofrecemos</h3>
+      <ul>
+        <li>🎧 DJs en vivo con la mejor música</li>
+        <li>🍹 Barra con cócteles exclusivos</li>
+        <li>🎉 Eventos temáticos cada semana</li>
+        <li>🛡️ Un ambiente seguro y de confianza</li>
+      </ul>
+    </div>
+    <div class="nosotros-imagen">
+      <img src="assets/img/nosotros-2.png" alt="Tragos y eventos">
+    </div>
+  </section>
 
   <footer>
     <p>&copy; 2025 Disco Online</p>

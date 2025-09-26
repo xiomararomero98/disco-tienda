@@ -6,11 +6,14 @@
   <title>Contacto - Disco Online</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body class="contacto-page">
   <header>
-  <nav class="navbar" style="display: flex; align-items: center; justify-content: space-between;">
-    <h1 class="titulo-navbar" style="margin: 0;">Disco Club</h1>
-    <ul class="nav-links" style="display: flex; gap: 20px; list-style: none; margin: 0; padding: 0; align-items: center;">
+    <nav class="navbar">
+      <div class="logo">
+        <img src="assets/img/logo-deef.png" alt="Logo Disco" class="logo-img">
+        <h1 class="titulo-navbar">Disco Club</h1>
+      </div>
+      <ul class="nav-links">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="productos.html">Productos</a></li>
         <li><a href="blogs.html">Eventos</a></li>
@@ -18,30 +21,66 @@
         <li><a href="contacto.html">Contacto</a></li>
         <li><a href="login.html">Login</a></li>
         <li>
-            <a href="carrito.html" class="carrito-link" style="display: flex; align-items: center;">
-                🛒
-                <span id="contador-carrito" class="badge">0</span>
-            </a>
+          <a href="carrito.html" class="carrito-link">
+            🛒 <span id="contador-carrito" class="badge">0</span>
+          </a>
         </li>
-    </ul>
-</nav>
+      </ul>
+    </nav>
   </header>
 
-  <main>
-    <h2>Contacto</h2>
-    <form id="form-contacto">
-      <label>Nombre:</label>
-      <input type="text" name="nombre" required>
-      <label>Correo:</label>
-      <input type="email" name="correo" required>
-      <label>Comentario:</label>
-      <textarea name="comentario" rows="5" required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
+  <main class="contacto-container">
+    <h2>Contacto & Ubicación</h2>
+
+    <div class="contacto-grid">
+      <!-- Formulario -->
+      <div class="contacto-form">
+        <h3>Envíanos un mensaje</h3>
+        <form id="form-contacto">
+          <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+          </div>
+          <div class="form-group">
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" required>
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+      </div>
+
+      <!-- Información -->
+      <div class="contacto-info">
+        <h3>Información de contacto</h3>
+        <p><strong>📍 Dirección:</strong> Av. San pablo 6673, Lo Prado</p>
+        <p><strong>📞 Teléfono:</strong> +56 9 1234 5678</p>
+        <p><strong>📧 Correo:</strong> contacto@discoonline.cl</p>
+        <div class="contacto-mapa" style="display: flex; flex-direction: column; align-items: center;">
+            <iframe 
+                width="100%" height="350" frameborder="0" 
+                src="https://www.bing.com/maps/embed?h=350&w=800&cp=-33.4443~-70.7353&lvl=16&typ=d&sty=r&src=SHELL&FORM=MBEDV8" 
+                scrolling="no"
+                style="max-width: 400px;">
+            </iframe>
+            <div style="white-space: nowrap; text-align: center; width: 100%; max-width: 400px;">
+                <a target="_blank" href="https://www.bing.com/maps?q=Avenida+San+Pablo+6673,+Lo+Prado,+Chile&FORM=HDRSC4">Ver mapa más grande</a>
+                 &nbsp; | &nbsp; 
+                <a target="_blank" href="https://www.bing.com/maps?rtp=~adr.Avenida+San+Pablo+6673+Lo+Prado+Chile">Cómo llegar</a>
+            </div>
+        </div>
+
+      </div>
+    </div>
   </main>
 
   <footer>
     <p>&copy; 2025 Disco Online</p>
   </footer>
+
+  <script src="assets/js/validaciones.js"></script>
 </body>
 </html>
