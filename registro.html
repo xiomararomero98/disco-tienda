@@ -6,44 +6,80 @@
   <title>Registro - Disco Online</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-<header>
-    <nav class="navbar" style="display: flex; align-items: center; justify-content: space-between;">
-        <h1 class="titulo-navbar" style="margin: 0;">Disco Club</h1>
-        <ul class="nav-links" style="display: flex; gap: 20px; list-style: none; margin: 0;">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="productos.html">Productos</a></li>
-            <li><a href="blogs.html">Eventos</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="registro.html">Registro</a></li>
-            <li>
-                <a href="carrito.html" class="carrito-link">
-                    🛒
-                    <span id="contador-carrito" class="badge">0</span>
-                </a>
-            </li>
-        </ul>
+<body class="registro-page">
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="assets/img/logo-deef.png" alt="Logo Disco" class="logo-img">
+        <h1 class="titulo-navbar">Disco Club</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="blogs.html">Eventos</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="registro.html">Registro</a></li>
+        <li>
+          <a href="carrito.html" class="carrito-link">
+            🛒
+            <span id="contador-carrito" class="badge">0</span>
+          </a>
+        </li>
+      </ul>
     </nav>
-</header>
   </header>
 
-  <main>
-    <h2>Registro de Usuario</h2>
-    <form id="form-registro">
-      <label>RUN:</label>
-      <input type="text" name="run" required>
-      <label>Nombre:</label>
-      <input type="text" name="nombre" required>
-      <label>Apellidos:</label>
-      <input type="text" name="apellidos" required>
-      <label>Correo:</label>
-      <input type="email" name="correo" required>
-      <label>Dirección:</label>
-      <input type="text" name="direccion">
-      <label>Región:</label>
-      <select id="region"></select>
-      <label>Comuna:</label>
-      <select id="comuna"></select>
-      <button type="subm
+  <main class="registro-container">
+    <form id="form-registro" class="registro-box">
+      <h2>Crear Cuenta</h2>
+
+      <div class="form-group">
+        <label for="run">RUN:</label>
+        <input type="text" id="run" name="run" placeholder="12.345.678-9" required>
+      </div>
+
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+      </div>
+
+      <div class="form-group">
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" placeholder="Tus apellidos" required>
+      </div>
+
+      <div class="form-group">
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo" placeholder="ejemplo@gmail.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" placeholder="Tu dirección">
+      </div>
+
+      <div class="form-group">
+        <label for="region">Región:</label>
+        <select id="region" name="region"></select>
+      </div>
+
+      <div class="form-group">
+        <label for="comuna">Comuna:</label>
+        <select id="comuna" name="comuna"></select>
+      </div>
+
+      <button type="submit" class="btn">Registrarse</button>
+      <p class="registro-texto">¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Disco Online</p>
+  </footer>
+
+  <script src="assets/js/regiones.js"></script>
+  <script src="assets/js/validaciones.js"></script>
+</body>
+</html>

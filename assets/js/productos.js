@@ -1,7 +1,7 @@
 const productos = [
-  { id: 1, nombre: "Entrada General", precio: 5000, imagen: "assets/img/entrada.jpg" },
-  { id: 2, nombre: "Promo 2x1 Cerveza", precio: 6000, imagen: "assets/img/cerveza.jpg" },
-  { id: 3, nombre: "Whisky + Energética", precio: 15000, imagen: "assets/img/whisky.jpg" }
+  { id: 1, nombre: "Entrada General", precio: 10000, imagen: "assets/img/entradas.png" },
+  { id: 2, nombre: "Promo Balde de Cervezas", precio: 20000, imagen: "assets/img/cervezas.png" },
+  { id: 3, nombre: "Promo Balde de Whisky + bebidas", precio: 50000, imagen: "assets/img/whiskys.png" }
 ];
 
 const listaProductos = document.getElementById("lista-productos");

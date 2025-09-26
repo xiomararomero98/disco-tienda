@@ -3,24 +3,23 @@
 // =====================
 
 // Validación de Login
+document.getElementById("form-login")?.addEventListener("submit", validarLogin);
+
 function validarLogin(event) {
   event.preventDefault();
-  const correo = document.querySelector("#form-login input[name='correo']").value;
-  const password = document.querySelector("#form-login input[name='password']").value;
+  const correo = document.getElementById("correo").value;
+  const password = document.getElementById("password").value;
 
-  if (!correo.endsWith("@duoc.cl") && !correo.endsWith("@profesor.duoc.cl") && !correo.endsWith("@gmail.com")) {
-    alert("El correo debe ser @duoc.cl, @profesor.duoc.cl o @gmail.com");
-    return false;
-  }
-
+  // ✅ Solo validamos la contraseña
   if (password.length < 4 || password.length > 10) {
     alert("La contraseña debe tener entre 4 y 10 caracteres");
     return false;
   }
 
-  alert("Login válido ✅");
+  alert("Login válido ✅ Bienvenido a Disco Online");
   return true;
 }
+
 
 // Validación de Registro
 function validarRegistro(event) {

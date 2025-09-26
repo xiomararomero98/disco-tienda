@@ -2,7 +2,8 @@
 ---
 
 ## 👥 Autores
-- Xiomara Romero (@xiomararomero98)  
+- Xiomara Romero (@xiomararomero98)
+-  
 
 ---
 
@@ -24,5 +25,4 @@ Entrega **Evaluación 1**:
 
 ---
 
-## 📷 Capturas
-_(Puedes añadir capturas de pantalla de tu proyecto más adelante para hacerlo más atractivo)_  
+## 📷 Capturas del proyecto

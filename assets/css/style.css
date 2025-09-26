@@ -18,7 +18,7 @@ body {
   align-items: center;
   padding: 15px 30px;
     /* Fondo con la imagen */
-  background: #000000 url('https://www.transparenttextures.com/patterns/stardust.png');
+  background: #00000002 url('../img/navbar.jpg');
   background-size: auto;
   background-position: bottom;
   height: 80px; /* ajusta la altura */
@@ -50,7 +50,7 @@ body {
 }
 
 .navbar .logo img {
-  width: 150px;
+  width: 120px;
   height: auto;
 }
 
@@ -77,32 +77,45 @@ body {
   text-shadow: 0 0 5px #00ffcc;
 }
 
-/* Hero */
 .hero {
-  height: 70vh;
-  background: url('../img/navbar.jpg') no-repeat center center;
-  background-size:cover;
+  height: 85vh;
+  background-color: #000; /* bordes negros */
+  background-image: url('../img/hero-1.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain; /* mantiene proporción */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
+/* Section presentación debajo del hero */
+.presentacion {
+  background: #000; /* fondo negro sólido */
+  text-align: center;
+  padding: 60px 20px;
+}
 
-.hero-text {
-  background: rgba(0, 0, 0, 0.6);
+.presentacion-text {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(0,0,0,0.7);
   padding: 40px;
-  border-radius: 10px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #ff0099, 0 0 30px #00ffcc;
 }
 
-.hero-text h2 {
-  font-size: 32px;
+.presentacion-text h2 {
+  font-size: 36px;
   color: #ff0099;
-  text-shadow: 0 0 15px #ff0099;
+  text-shadow: 0 0 15px #ff0099, 0 0 30px #ff33aa;
+  margin-bottom: 20px;
 }
 
-.hero-text p {
-  margin: 15px 0;
+.presentacion-text p {
   font-size: 18px;
+  color: #fff;
+  margin-bottom: 20px;
 }
 
 .btn {
@@ -197,6 +210,131 @@ body {
   border-radius: 50%;
   box-shadow: 0 0 8px #ff0099, 0 0 12px #ff33aa; /* efecto neón */
 }
+/* Fondo especial solo para la página de login */
+body.login-page {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+
+  background: url('../img/navbar.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+/* Caja de login */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.login-box {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  border-radius: 12px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 0 15px #ff0099, 0 0 25px #00ffcc;
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+  color: #ff0099;
+  text-shadow: 0 0 10px #ff0099;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+}
+
+.btn {
+  background: #00ffcc;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ff0099;
+  color: #fff;
+}
+
+.registro-texto {
+  margin-top: 15px;
+  font-size: 14px;
+}
+/* Fondo especial para registro */
+body.registro-page {
+  background: url('../img/navbar.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+/* Caja registro */
+.registro-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 85vh;
+}
+
+.registro-box {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 30px;
+  border-radius: 12px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 0 15px #ff0099, 0 0 25px #00ffcc;
+}
+
+.registro-box h2 {
+  margin-bottom: 20px;
+  color: #00ffcc;
+  text-shadow: 0 0 8px #00ffcc;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+}
+
+.registro-texto {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
 
 /* Footer */
 footer {
