@@ -489,7 +489,6 @@ body.nosotros-page {
     max-height: 250px; /* en móvil más compacto */
   }
 }
-<<<<<<< HEAD
 /*eventos*/
 .blog-lista {
   display: flex;
@@ -510,7 +509,6 @@ body.nosotros-page {
   border-radius: 8px;
   display: block;
 }
-=======
 /* Detalle producto */
 .detalle-container {
   max-width: 900px;
@@ -751,8 +749,6 @@ body.carrito-page {
   font-size: 16px;
   color: #ddd;
 }
-
->>>>>>> f47e57aa82be2a064ece5125b3dadad5bf8fa8b9
 /* Footer */
 footer {
   background: #111;
