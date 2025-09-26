@@ -3,33 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin - Disco Online</title>
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <style>
-    .admin-container { display: flex; min-height: 100vh; }
-    .sidebar { width: 220px; background: #111; padding: 20px; color: #fff; }
-    .sidebar h2 { color: #ff0099; }
-    .sidebar ul { list-style: none; padding: 0; }
-    .sidebar li { margin: 15px 0; }
-    .sidebar a { color: #fff; text-decoration: none; }
-    .sidebar a:hover { color: #00ffcc; }
-    .content { flex: 1; padding: 30px; background: #1a1a1a; color: #fff; }
-  </style>
+  <title>Dashboard - Admin Disco</title>
+  <link rel="stylesheet" href="assets/css/admin.css">
+  <script defer src="assets/js/admin.js"></script>
 </head>
 <body>
-  <div class="admin-container">
-    <aside class="sidebar">
-      <h2>Panel Admin</h2>
-      <ul>
-        <li><a href="index.html">🏠 Inicio</a></li>
-        <li><a href="productos.html">📦 Productos</a></li>
-        <li><a href="usuarios.html">👥 Usuarios</a></li>
-      </ul>
-    </aside>
-    <main class="content">
-      <h1>Bienvenido Administrador</h1>
-      <p>Desde aquí podrás gestionar los productos, usuarios y configuraciones de la disco.</p>
-    </main>
-  </div>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="brand"><span class="dot"></span> Disco Admin</div>
+    <nav>
+      <a href="index.html" class="active">🏠 Dashboard</a>
+      <a href="productos.html">📦 Productos</a>
+      <a href="usuarios.html">👤 Usuarios</a>
+    </nav>
+  </aside>
+
+  <!-- Contenido principal -->
+  <main class="content">
+    <header class="admin-header">
+      <h1>📊 Panel de Administración</h1>
+      <p>Bienvenido, aquí puedes gestionar productos y usuarios de la Disco Online 🎶</p>
+    </header>
+
+    <section class="dashboard">
+      <div class="card">
+        <h3>Total Productos</h3>
+        <p id="total-productos">0</p>
+      </div>
+      <div class="card">
+        <h3>Total Usuarios</h3>
+        <p id="total-usuarios">0</p>
+      </div>
+    </section>
+
+    <section class="acciones">
+      <h2>Accesos rápidos</h2>
+      <div class="acciones-grid">
+        <a href="productos.html" class="btn">➕ Gestionar Productos</a>
+        <a href="usuarios.html" class="btn">👥 Gestionar Usuarios</a>
+      </div>
+    </section>
+  </main>
 </body>
 </html>

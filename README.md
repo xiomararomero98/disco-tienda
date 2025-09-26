@@ -3,7 +3,8 @@
 
 ## 👥 Autores
 - Xiomara Romero (@xiomararomero98)
--  
+-Renato Diaz
+-Sandra Chamorro
 
 ---
 
