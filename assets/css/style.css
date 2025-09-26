@@ -40,9 +40,10 @@ body {
 }
 
 .titulo-navbar {
+  font-family: 'Lovelo-Line';
   font-size: 24px;
   color: #fff;
-  text-shadow: 0 0 10px #ff0099, 0 0 20px #ff0099; /* efecto neón */
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff;
 }
 .navbar .logo {
   display: flex;
@@ -57,8 +58,8 @@ body {
 
 .navbar h1 {
   font-size: 20px;
-  color: #ff0099;
-  text-shadow: 0 0 10px #ff0099;
+  color: #fff;
+  text-shadow: 0 0 10px #fff;
 }
 
 .nav-links {
@@ -469,8 +470,8 @@ body.nosotros-page {
 
 .nosotros-imagen img {
   width: 100%;
-  max-height: 400px;   /* 👈 límite para que no se desborde */
-  object-fit: cover;   /* 👈 mantiene proporciones y rellena */
+  max-height: 400px;
+  object-fit: cover;
   border-radius: 12px;
 }
 
@@ -751,4 +752,11 @@ footer {
   margin-top: 30px;
   font-size: 14px;
   color: #aaa;
+}
+/*Fuente navbar*/
+@font-face {
+  font-family: 'Lovelo-Line';
+  src: url('../fonts/Lovelo-line.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal; 
 }
