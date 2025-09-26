@@ -486,6 +486,26 @@ body.nosotros-page {
     max-height: 250px; /* en móvil más compacto */
   }
 }
+/*eventos*/
+.blog-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.blog-lista article {
+  flex: 1 1 250px; /* todos crecen igual */
+  max-width: 300px;
+  text-align: center;
+}
+.blog-lista img{
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 10px;
+  border-radius: 8px;
+  display: block;
+}
 /* Footer */
 footer {
   background: #111;
