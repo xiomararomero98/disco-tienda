@@ -80,7 +80,7 @@ body {
 }
 
 .hero {
-  height: 85vh;
+  height: 80vh;
   background-color: #000; /* bordes negros */
   background-image: url('../img/hero-1.png');
   background-repeat: no-repeat;
@@ -90,12 +90,13 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 20px 40px;
 }
 /* Section presentación debajo del hero */
 .presentacion {
   background: #000; /* fondo negro sólido */
   text-align: center;
-  padding: 60px 20px;
+  padding: 60px 40px;
 }
 
 .presentacion-text {
