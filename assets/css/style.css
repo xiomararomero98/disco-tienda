@@ -80,7 +80,7 @@ body {
 }
 
 .hero {
-  height: 85vh;
+  height: 80vh;
   background-color: #000; /* bordes negros */
   background-image: url('../img/hero-1.png');
   background-repeat: no-repeat;
@@ -90,12 +90,13 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 20px 40px;
 }
 /* Section presentación debajo del hero */
 .presentacion {
   background: #000; /* fondo negro sólido */
   text-align: center;
-  padding: 60px 20px;
+  padding: 60px 40px;
 }
 
 .presentacion-text {
@@ -475,12 +476,6 @@ body.nosotros-page {
   border-radius: 12px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .nosotros-section {
-    flex-direction: column;
-    text-align: center;
-  }
 
   .nosotros-section.invertida {
     flex-direction: column;
@@ -489,7 +484,6 @@ body.nosotros-page {
   .nosotros-imagen img {
     max-height: 250px; /* en móvil más compacto */
   }
-}
 
 .blog-lista article {
   flex: 1 1 250px; /* todos crecen igual */
@@ -743,6 +737,36 @@ body.carrito-page {
   margin: 10px 0;
   font-size: 16px;
   color: #ddd;
+}
+/* Botón hamburguesa oculto en escritorio */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* oculto por defecto */
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 80px; /* debajo del navbar */
+    right: 0;
+    width: 200px;
+    padding: 20px;
+    border-radius: 0 0 0 12px;
+  }
+
+  .nav-links.show {
+    display: flex; /* se muestra al dar click */
+  }
+
+  .menu-toggle {
+    display: block; /* visible solo en mobile */
+  }
 }
 /* Footer */
 footer {

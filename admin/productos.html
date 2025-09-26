@@ -3,46 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Productos - Disco Online</title>
-  <link rel="stylesheet" href="../assets/css/style.css">
+  <title>Productos - Admin Disco</title>
+  <link rel="stylesheet" href="assets/css/admin.css">
+  <script defer src="assets/js/admin.js"></script>
 </head>
 <body>
-  <div class="admin-container">
-    <aside class="sidebar">
-      <h2>Panel Admin</h2>
-      <ul>
-        <li><a href="index.html">🏠 Inicio</a></li>
-        <li><a href="productos.html">📦 Productos</a></li>
-        <li><a href="usuarios.html">👥 Usuarios</a></li>
-      </ul>
-    </aside>
-    <main class="content">
-      <h1>Gestión de Productos</h1>
-      <table border="1" cellpadding="8" cellspacing="0" style="width:100%; background:#222; color:#fff;">
-        <thead>
-          <tr>
-            <th>Código</th>
-            <th>Nombre</th>
-            <th>Precio</th>
-            <th>Stock</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody id="tabla-productos">
-          <!-- Aquí se cargarán los productos con JS -->
-        </tbody>
-      </table>
+  <aside class="sidebar">
+    <div class="brand"><span class="dot"></span> Disco Admin</div>
+    <nav>
+      <a href="index.html">🏠 Dashboard</a>
+      <a href="productos.html" class="active">📦 Productos</a>
+      <a href="usuarios.html">👤 Usuarios</a>
+    </nav>
+  </aside>
 
-      <h2>Nuevo Producto</h2>
-      <form id="form-producto">
-        <label>Código:</label><input type="text" name="codigo" required><br>
-        <label>Nombre:</label><input type="text" name="nombre" required><br>
-        <label>Precio:</label><input type="number" name="precio" required><br>
-        <label>Stock:</label><input type="number" name="stock" required><br>
-        <button type="submit">Guardar</button>
-      </form>
-    </main>
-  </div>
-  <script src="../assets/js/validaciones.js"></script>
+  <main class="content">
+    <h1>📦 Gestión de Productos</h1>
+
+    <form id="form-producto">
+      <input type="hidden" id="id">
+      <input type="text" id="nombre" placeholder="Nombre" required>
+      <input type="number" id="precio" placeholder="Precio" required>
+      <button type="submit">Guardar</button>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+        </tr>
+      </thead>
+      <tbody id="tabla-productos"></tbody>
+    </table>
+  </main>
 </body>
 </html>
